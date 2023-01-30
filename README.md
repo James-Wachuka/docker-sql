@@ -3,7 +3,7 @@ This is part of data engineering zoomcamp week one module. Integrating postgres 
 
 ####  postgres & pg-admin
 1. using a bridge network
-create a network pg-admin for the two containers to communicate
+create a network pg-network for the two containers
 
 use ``` docker network create pg-network```
 
@@ -30,7 +30,7 @@ docker run -it \
    dpage/pgadmin4
 ```
 2. Using docker-compose file
-we can create a service that runs postgres and pgadmin using a docker compose file to avoid having to create network.
+we can create a service that runs postgres and pgadmin to avoid having to create network.
 
 #### ingestion script
 ```wget``` is used to download the data and save in a csv file. We then build an image from the ingestion script in order to use with postgres & pgadmin containers, using the docker file.
